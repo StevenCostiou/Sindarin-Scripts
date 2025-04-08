@@ -29,7 +29,12 @@ SindarinSTONParsingCommand >> dynamicName [
 
 { #category : 'executing' }
 SindarinSTONParsingCommand >> execute [
-	self halt
+
+	| sindarin |
+	sindarin := self context sindarinDebugger.
+	self context debuggerActionModel preventUpdatesDuring: [
+			sindarin stepUntil: [
+				sindarin selector = targetParsingMethod asSymbol ] ]
 ]
 
 { #category : 'accessing' }
