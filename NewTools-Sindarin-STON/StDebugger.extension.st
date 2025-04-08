@@ -25,6 +25,6 @@ StDebugger class >> buildSindarinSTONExtentionCommandsGroupWith: stDebuggerInsta
 { #category : '*NewTools-Sindarin-STON' }
 StDebugger class >> stonReaderParsingSelectors [
 
-	^ (STONReader methods select: [ :m | 'parse*' match: m selector ])
-		  collect: #selector
+	^ ((STONReader methods select: [ :m | 'parse*' match: m selector ])
+		   collect: #selector) asSortedCollection
 ]

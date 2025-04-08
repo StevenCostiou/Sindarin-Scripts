@@ -35,7 +35,7 @@ SindarinSTONParsingCommand >> execute [
 { #category : 'accessing' }
 SindarinSTONParsingCommand >> name [
 
-	^ self targetParsingMethod
+	^ 'Step to next ' , self targetParsingMethod
 ]
 
 { #category : 'accessing' }
