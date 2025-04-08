@@ -33,6 +33,12 @@ SindarinSTONParsingCommand >> execute [
 ]
 
 { #category : 'accessing' }
+SindarinSTONParsingCommand >> name [
+
+	^ self targetParsingMethod
+]
+
+{ #category : 'accessing' }
 SindarinSTONParsingCommand >> targetParsingMethod [
 
 	^ targetParsingMethod
