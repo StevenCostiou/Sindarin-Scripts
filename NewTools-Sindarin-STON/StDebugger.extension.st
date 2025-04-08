@@ -16,7 +16,7 @@ StDebugger class >> buildSindarinSTONExtentionCommandsGroupWith: stDebuggerInsta
 	toolbarSTONGroup := CmCommandGroup forSpec
 			beToolbarPopoverButton;
 			name: 'STON';
-			icon: (stDebuggerInstance application iconNamed: #smallDebugIt);
+			icon: (stDebuggerInstance application iconNamed: #changeUpdate);
 			yourself.
 	toolbarGroup register: toolbarSTONGroup.
 	commands do: [ :c | toolbarSTONGroup register: c ].		 
