@@ -33,14 +33,14 @@ SindarinSTONParsingCommand >> execute [
 	| sindarin |
 	sindarin := self context sindarinDebugger.
 	self context debuggerActionModel preventUpdatesDuring: [
-			sindarin stepUntil: [
+			sindarin diveUntil: [
 				sindarin selector = targetParsingMethod asSymbol ] ]
 ]
 
 { #category : 'accessing' }
 SindarinSTONParsingCommand >> name [
 
-	^ 'Step to next ' , self targetParsingMethod
+	^ 'Step to next ' , (self targetParsingMethod ifNil:[''])
 ]
 
 { #category : 'accessing' }
